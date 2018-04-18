@@ -16,7 +16,7 @@ number_of_records <- nrow(total_mtDNA_base_composition)
 for (NC in 1:number_of_records) {
     if (total_mtDNA_base_composition$Class[NC] == "Mammalia") {
         ref_ID <- total_mtDNA_base_composition$Ref[NC]
-		print(ref_ID) # show some progress
+	print(ref_ID) # show some progress
         fasta <- entrez_fetch(db="nuccore", id=ref_ID, rettype="fasta")
         filename <- paste(subDir, "/", ref_ID,".fasta", sep="")
         write(fasta, file = filename)
