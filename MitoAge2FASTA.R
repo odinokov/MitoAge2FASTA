@@ -3,11 +3,12 @@
 # biocLite("ShortRead")
 # install.packages("readr")
 # install.packages("rentrez")
+# install.packages("seqinr")
 library(readr)
 library(rentrez)
 library(data.table)
 library(ShortRead)
-
+library("seqinr")
 
 ### downloaded the mitoAge data and used this script to get the actual sequences of each mtDNA
 setwd("D:/MitoAge/mitoage_build1_full_database")
