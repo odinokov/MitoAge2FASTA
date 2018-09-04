@@ -28,6 +28,16 @@ for (NC in 1:number_of_records) {
     }
 }
 
+# One FASTA per line
+#
+# file_names <- list.files(pattern = "\\.fasta$")
+# for (i in file_names){
+#   seqs <- read.fasta(file=i)
+#   fname <- sub("\\.[^.]*$", "\\1", basename(i)) 
+#   fname <-paste0(subDir, "/", fname, ".fa")
+#   write.fasta(seqs, names(seqs), nbchar=65536, file.out=fname)
+#   }
+
 seqcombined <- readFasta(subDir, "fasta$") # Reading all fasta files into one object
 writeFasta(seqcombined, "merged_fasta.fasta")
 
